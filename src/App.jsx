@@ -27,7 +27,7 @@ function App() {
   }
 
   function edit(index){
-    setTodo(todoArr[index])
+    setTodo(todoArr[index].text)
     setIsEditing(true)
     setCurrentIndex(index)
 }
