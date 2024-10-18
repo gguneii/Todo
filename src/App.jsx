@@ -8,7 +8,7 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(null)
 
   function addTodo(){
-    if(todo) {
+    if(todo.trim()) {
       if (isEditing) {
         const updatedTodos =[...todoArr]
         updatedTodos[currentIndex].text = todo
@@ -43,7 +43,7 @@ function App() {
     <h2 className="text-2xl font-bold text-pink-600 mb-6">To-Do List</h2>
   
     <div className="flex mb-4">
-      <input value={todo} onChange={(e) => setTodo(e.target.value.trim())}
+      <input value={todo} onChange={(e) => setTodo(e.target.value)}
         type="text"
         placeholder="Add a new task"
         className="flex-grow px-4 py-2 border border-pink-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-pink-500"
